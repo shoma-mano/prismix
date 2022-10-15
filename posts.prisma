@@ -1,0 +1,14 @@
+model Post {
+    id         Int     @id @default(autoincrement())
+    title      String
+    content    String
+    account_id Int
+    account    Account @relation(fields: [account_id], references: [id])
+
+    @@map("posts")
+}
+
+model Account {
+    id     Int @id
+    posts  Post[]
+}

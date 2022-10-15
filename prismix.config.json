@@ -1,0 +1,11 @@
+{
+  "mixers": [
+    {
+        "input": [
+            "base.prisma",
+            "posts.prisma"
+        ],
+        "output": "schema.prisma"
+    }
+  ]
+}
